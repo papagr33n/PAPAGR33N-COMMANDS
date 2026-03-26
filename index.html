@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PAPAGR33N Bot</title>
+  <link rel="icon" href="https://cdn.7tv.app/emote/01HVH0MAR80008QNPYB69M24KJ/2x.avif" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #111a13;
+      color: #e8f5ea;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0 12px;
+      background: #162019;
+      border-bottom: 1px solid #1f2e22;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #e8f5ea;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0 10px;
+      height: 100%;
+    }
+
+    .nav-brand img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    .nav-tab {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      color: #7aad82;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0 14px;
+      height: 100%;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      position: relative;
+      top: 1px;
+    }
+
+    .nav-tab img {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+
+    .nav-tab:hover {
+      color: #e8f5ea;
+      background: rgba(74,222,128,0.06);
+    }
+
+    .nav-tab.active {
+      color: #4ade80;
+      border-bottom-color: #4ade80;
+      background: rgba(74,222,128,0.08);
+    }
+
+    /* ── CENTER ── */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 16px;
+      border: 2px solid #1f3d24;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #e8f5ea;
+    }
+
+    .tagline {
+      color: #7aad82;
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+    }
+
+    .info-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 0.92rem;
+      color: #c5e8c8;
+    }
+
+    .info-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      background: #1a2e1d;
+      border: 1px solid #2a4a2e;
+      color: #4ade80;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    a.inline-link {
+      color: #4ade80;
+      text-decoration: none;
+    }
+
+    a.inline-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">
+    <img src="https://cdn.7tv.app/emote/01HVH0MAR80008QNPYB69M24KJ/2x.avif" alt="PAPAGR33N"/>
+    PAPAGR33N
+  </a>
+  <a class="nav-tab active" href="/">
+    Home
+  </a>
+  <a class="nav-tab" href="/commands">
+    Commands
+  </a>
+</nav>
+
+<main>
+  <img class="avatar" src="https://cdn.7tv.app/emote/01HVH0MAR80008QNPYB69M24KJ/2x.avif" alt="PAPAGR33N"/>
+  <h1>PAPAGR33N</h1>
+  <p class="tagline">PAPAGR33N's self bot</p>
+
+  <div class="info-lines">
+    <div class="info-line">
+      Type <code>+join</code> in <a class="inline-link" href="https://twitch.tv/PAPAGR33N" target="_blank">PAPAGR33N's channel</a> to get started
+    </div>
+    <div class="info-line">
+      Type <code>+part</code> for the bot to leave the channel
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
