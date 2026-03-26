@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PAPAGR33N – Commands</title>
+  <link rel="icon" href="https://cdn.7tv.app/emote/01HVH0MAR80008QNPYB69M24KJ/2x.avif" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #111a13;
+      color: #e8f5ea;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0 12px;
+      background: #162019;
+      border-bottom: 1px solid #1f2e22;
+      height: 48px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #e8f5ea;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0 10px;
+      height: 100%;
+    }
+
+    .nav-brand img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    .nav-tab {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      color: #7aad82;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0 14px;
+      height: 100%;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      position: relative;
+      top: 1px;
+    }
+
+    .nav-tab img {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+
+    .nav-tab:hover {
+      color: #e8f5ea;
+      background: rgba(74,222,128,0.06);
+    }
+
+    .nav-tab.active {
+      color: #4ade80;
+      border-bottom-color: #4ade80;
+      background: rgba(74,222,128,0.08);
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #e8f5ea;
+    }
+
+    .page-sub {
+      color: #7aad82;
+      font-size: 0.875rem;
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #4a7a52;
+      margin-bottom: 6px;
+      margin-top: 32px;
+      padding-left: 4px;
+    }
+
+    .cmd-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .cmd-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 12px;
+      border-radius: 6px;
+      transition: background 0.1s;
+      gap: 16px;
+    }
+
+    .cmd-row:hover { background: #162019; }
+
+    .cmd-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .cmd-tag {
+      font-family: 'Courier New', monospace;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #4ade80;
+      background: #1a2e1d;
+      border: 1px solid #2a4a2e;
+      border-radius: 4px;
+      padding: 2px 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .cmd-desc {
+      font-size: 0.86rem;
+      color: #7aad82;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cmd-usage {
+      font-size: 0.74rem;
+      color: #2d5233;
+      font-family: 'Courier New', monospace;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #1f2e22;
+      margin: 36px 0 0;
+    }
+
+    @media (max-width: 500px) {
+      .cmd-usage { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">
+    <img src="https://cdn.7tv.app/emote/01HVH0MAR80008QNPYB69M24KJ/2x.avif" alt="PAPAGR33N"/>
+    PAPAGR33N
+  </a>
+  <a class="nav-tab" href="/">
+    Home
+  </a>
+  <a class="nav-tab active" href="/commands">
+    Commands
+  </a>
+</nav>
+
+<main>
+  <h1>Commands</h1>
+  <p class="page-sub">All available chat commands for PAPAGR33N's bot.</p>
+
+  <!-- MODERATION -->
+  <p class="section-title">Moderation</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+ban</span><span class="cmd-desc">Bans a user from the channel</span></div><span class="cmd-usage">+ban &lt;user&gt; [reason]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+unban</span><span class="cmd-desc">Unbans a user</span></div><span class="cmd-usage">+unban &lt;user&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+timeout</span><span class="cmd-desc">Timeouts a user</span></div><span class="cmd-usage">+timeout &lt;user&gt; [seconds] [reason]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+blockedterm</span><span class="cmd-desc">Manages AutoMod blocked terms</span></div><span class="cmd-usage">+blockedterm add/remove &lt;term&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+clear</span><span class="cmd-desc">Clears the chat</span></div><span class="cmd-usage">+clear</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+settitle</span><span class="cmd-desc">Updates the stream title</span></div><span class="cmd-usage">+settitle &lt;title&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+setgame</span><span class="cmd-desc">Updates the stream category</span></div><span class="cmd-usage">+setgame &lt;game&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+massping</span><span class="cmd-desc">Pings everyone in chat (Broadcaster/Owner/Ambassadors only)</span></div><span class="cmd-usage">+massping [message]</span></div>
+  </div>
+
+  <!-- EMOTES -->
+  <p class="section-title">Emotes</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+add</span><span class="cmd-desc">Adds an emote from 7TV</span></div><span class="cmd-usage">+add &lt;emote_name|link&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+remove</span><span class="cmd-desc">Removes an emote from 7TV</span></div><span class="cmd-usage">+remove &lt;emote_name|link&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+alias</span><span class="cmd-desc">Rename an emote on your channel</span></div><span class="cmd-usage">+alias &lt;emote&gt; &lt;new_alias&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+yoink</span><span class="cmd-desc">Steals an emote from another channel</span></div><span class="cmd-usage">+yoink &lt;channel&gt; &lt;emote&gt; [as:alias]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+createset</span><span class="cmd-desc">Creates a new emote set on 7TV</span></div><span class="cmd-usage">+createset &lt;name&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+deleteset</span><span class="cmd-desc">Deletes a 7TV emote set</span></div><span class="cmd-usage">+deleteset &lt;id&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+switchset</span><span class="cmd-desc">Swaps the current active emote set</span></div><span class="cmd-usage">+switchset &lt;id&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+editor</span><span class="cmd-desc">Manages who can edit emotes via bot commands</span></div><span class="cmd-usage">+editor &lt;add|remove|list&gt; [user]</span></div>
+  </div>
+
+  <!-- TWITCH INFO -->
+  <p class="section-title">Twitch Info</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+user</span><span class="cmd-desc">Detailed Twitch profile info</span></div><span class="cmd-usage">+user / +u [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+id</span><span class="cmd-desc">Get a user's numeric Twitch ID</span></div><span class="cmd-usage">+id [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+accountage</span><span class="cmd-desc">See how long ago an account was created</span></div><span class="cmd-usage">+aa / +accountage [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+followage</span><span class="cmd-desc">Check how long a user has followed the channel</span></div><span class="cmd-usage">+followage [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+subage</span><span class="cmd-desc">Check subscription length</span></div><span class="cmd-usage">+subage / +sa [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+modcheck</span><span class="cmd-desc">See how long someone has been a moderator</span></div><span class="cmd-usage">+modcheck / +mc [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+followercount</span><span class="cmd-desc">Current follower count</span></div><span class="cmd-usage">+fc / +followercount [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+streaminfo</span><span class="cmd-desc">Current stream title, game, viewers, and uptime</span></div><span class="cmd-usage">+si / +streaminfo [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+title</span><span class="cmd-desc">Quickly check a channel's title</span></div><span class="cmd-usage">+title [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+chatters</span><span class="cmd-desc">Count of users currently in chat</span></div><span class="cmd-usage">+chatters [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+topchatters</span><span class="cmd-desc">Top 10 chatters from StreamElements stats</span></div><span class="cmd-usage">+tc / +topchatters [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+pfp</span><span class="cmd-desc">Direct link to a user's profile picture</span></div><span class="cmd-usage">+pfp / +avatar [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+subemotes</span><span class="cmd-desc">List of sub emotes for a channel</span></div><span class="cmd-usage">+subemotes [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+isbanned</span><span class="cmd-desc">Check if a user is globally banned on Twitch</span></div><span class="cmd-usage">+isbanned [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+name</span><span class="cmd-desc">Check if a username is available or taken</span></div><span class="cmd-usage">+name [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+roles</span><span class="cmd-desc">Check if a user is Staff, Partner, or Affiliate</span></div><span class="cmd-usage">+roles [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+logs</span><span class="cmd-desc">Link to supa.sh logs for a user</span></div><span class="cmd-usage">+logs [user] [channel]</span></div>
+  </div>
+
+  <!-- 7TV -->
+  <p class="section-title">7TV</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+badges</span><span class="cmd-desc">Count and rank of total 7TV badges owned</span></div><span class="cmd-usage">+badges [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+paint</span><span class="cmd-desc">Info about current 7TV paint and its rarity</span></div><span class="cmd-usage">+paint [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+7tvsubage</span><span class="cmd-desc">Check 7TV platform subscription status</span></div><span class="cmd-usage">+7tvsa / +7tvsubage [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+7tvid</span><span class="cmd-desc">Get a user's 7TV internal ID</span></div><span class="cmd-usage">+7tvid [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+set</span><span class="cmd-desc">View a user's active 7TV emote set info</span></div><span class="cmd-usage">+set [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+7tvuser</span><span class="cmd-desc">General 7TV profile summary</span></div><span class="cmd-usage">+7tvu / +7tvuser [user]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+7tvpaint</span><span class="cmd-desc">Get specific cosmetic IDs for paint or badge</span></div><span class="cmd-usage">+7tvpaint / +7tvbadge [user]</span></div>
+  </div>
+
+  <!-- UTILITY -->
+  <p class="section-title">Utility</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+gpt</span><span class="cmd-desc">Ask the AI (Groq Llama 3.1) a question</span></div><span class="cmd-usage">+gpt &lt;question&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+translate</span><span class="cmd-desc">Translates text (or replied message) to English</span></div><span class="cmd-usage">+translate / +tl [text]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+prefix</span><span class="cmd-desc">View or change the bot's command prefix (Mod only)</span></div><span class="cmd-usage">+prefix [new_prefix]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+join</span><span class="cmd-desc">Make the bot join a new channel</span></div><span class="cmd-usage">+join [channel]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+part</span><span class="cmd-desc">Make the bot leave a channel</span></div><span class="cmd-usage">+part [channel]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+ping</span><span class="cmd-desc">Check bot uptime and connection status</span></div><span class="cmd-usage">+ping</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+spam</span><span class="cmd-desc">Repeats a message (Mod only)</span></div><span class="cmd-usage">+spam &lt;1-50&gt; &lt;msg&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+fill</span><span class="cmd-desc">Fills a message with as many copies of an emote as possible</span></div><span class="cmd-usage">+fill &lt;emote&gt;</span></div>
+  </div>
+
+  <!-- ECONOMY -->
+  <p class="section-title">Economy</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+points</span><span class="cmd-desc">Check your current point balance</span></div><span class="cmd-usage">+points</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+give</span><span class="cmd-desc">Send points to another user</span></div><span class="cmd-usage">+give / +pay &lt;user&gt; &lt;amount|all&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+daily</span><span class="cmd-desc">Claim random daily points</span></div><span class="cmd-usage">+daily</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+leaderboard</span><span class="cmd-desc">See the top 3 point holders</span></div><span class="cmd-usage">+leaderboard / +lb</span></div>
+  </div>
+
+  <!-- GAMES -->
+  <p class="section-title">Games</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+gamble</span><span class="cmd-desc">50/50 double or nothing</span></div><span class="cmd-usage">+gamble &lt;amount|all&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+blackjack</span><span class="cmd-desc">Play cards against the dealer</span></div><span class="cmd-usage">+blackjack / +bj &lt;amount|all&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+hit</span><span class="cmd-desc">Draw another card in blackjack</span></div><span class="cmd-usage">+hit</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+stand</span><span class="cmd-desc">Hold your hand and end your turn</span></div><span class="cmd-usage">+stand</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+roulette</span><span class="cmd-desc">Classic roulette — red/black/even/odd/numbers</span></div><span class="cmd-usage">+roulette &lt;amount&gt; &lt;bet_type&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+quiz</span><span class="cmd-desc">Daily trivia game with point rewards</span></div><span class="cmd-usage">+quiz</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+duel</span><span class="cmd-desc">Challenge a viewer — winner takes the pot</span></div><span class="cmd-usage">+duel @user [amount]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+join</span><span class="cmd-desc">Accept an incoming duel challenge</span></div><span class="cmd-usage">+join</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+cancelduel</span><span class="cmd-desc">Cancel a duel you've started</span></div><span class="cmd-usage">+cancelduel</span></div>
+  </div>
+
+  <!-- COOKIES -->
+  <p class="section-title">Cookies</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+cookies</span><span class="cmd-desc">Check your cookie balance</span></div><span class="cmd-usage">+cookies</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+dailycookie</span><span class="cmd-desc">Claim your daily cookies (with streak multiplier!)</span></div><span class="cmd-usage">+dailycookie</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+cookie give</span><span class="cmd-desc">Send cookies to someone</span></div><span class="cmd-usage">+cookie give &lt;user&gt; &lt;amount&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+cookie eat</span><span class="cmd-desc">Nom on your cookies</span></div><span class="cmd-usage">+cookie eat &lt;amount&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+cookie steal</span><span class="cmd-desc">Try to steal cookies from another user (risky!)</span></div><span class="cmd-usage">+cookie steal &lt;user&gt;</span></div>
+  </div>
+
+  <!-- SOCIAL -->
+  <p class="section-title">Social & Misc</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+afk</span><span class="cmd-desc">Sets an AFK status that triggers when you're mentioned</span></div><span class="cmd-usage">+afk [reason]</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+notify</span><span class="cmd-desc">Get a message when a streamer goes live (or offline)</span></div><span class="cmd-usage">+notify [offline] &lt;user&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+unnotify</span><span class="cmd-desc">Remove a live/offline notification</span></div><span class="cmd-usage">+unnotify &lt;user&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+vanish</span><span class="cmd-desc">Timeout yourself for 1 second to clear your messages</span></div><span class="cmd-usage">+vanish</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+followresponses</span><span class="cmd-desc">Automated custom welcome for new followers</span></div><span class="cmd-usage">+fr &lt;enable/disable/set&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+ambassador</span><span class="cmd-desc">Grant a mod permission to use administrative bot commands</span></div><span class="cmd-usage">+ambassador &lt;add/remove&gt; &lt;user&gt;</span></div>
+  </div>
+
+  <!-- CUSTOM COMMANDS -->
+  <p class="section-title">Custom Commands</p>
+  <div class="cmd-list">
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+addcmd</span><span class="cmd-desc">Create a new custom text command for your channel</span></div><span class="cmd-usage">+addcmd &lt;name&gt; &lt;response&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+editcmd</span><span class="cmd-desc">Update an existing custom command</span></div><span class="cmd-usage">+editcmd &lt;name&gt; &lt;response&gt;</span></div>
+    <div class="cmd-row"><div class="cmd-left"><span class="cmd-tag">+delcmd</span><span class="cmd-desc">Remove a custom command</span></div><span class="cmd-usage">+delcmd &lt;name&gt;</span></div>
+  </div>
+
+  <hr/>
+</main>
+
+</body>
+</html>
